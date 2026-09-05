@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Tile Quest Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <div class="sky-glow"></div>
+
+    <header class="topbar">
+      <button class="icon-btn" id="settingsBtn" aria-label="Settings">⚙️</button>
+      <button class="icon-btn" id="mapBtn" aria-label="Map">🗺️</button>
+
+      <div class="coins">
+        <span class="coin">🪙</span>
+        <span id="coinCount">40</span>
+        <button id="shopBtn">🛒</button>
+      </div>
+    </header>
+
+    <main id="homeScreen" class="screen active">
+      <div class="mascot">🐣</div>
+      <div class="logo">
+        <div class="logo-main">TILE</div>
+        <div class="logo-ribbon">QUEST</div>
+        <div class="logo-sub">EXPLORER</div>
+      </div>
+
+      <div class="daily-card">
+        <span>🔥</span>
+        <div><b>Daily Streak</b><small>Keep exploring!</small></div>
+        <strong id="streak">x3</strong>
+      </div>
+
+      <div class="home-board-preview">
+        <div class="mini-grid">
+          <span>1</span><span>2</span><span>3</span>
+          <span>4</span><span>5</span><span>🌸</span>
+          <span>7</span><span>8</span><span>9</span>
+          <span>10</span><span>11</span><span>🌸</span>
+        </div>
+      </div>
+
+      <button class="level-button" id="playBtn">LEVEL <span id="homeLevel">1</span><small>▶ PLAY</small></button>
+
+      <div class="home-actions">
+        <button id="mapBtn2">🗺️ MAP</button>
+        <button id="shopBtn2">🎁 SHOP</button>
+      </div>
+    </main>
+
+    <main id="mapScreen" class="screen">
+      <div class="screen-title">🗺️ Adventure Map</div>
+      <div id="levelMap" class="level-map"></div>
+      <button class="back-home" id="mapBack">← HOME</button>
+    </main>
+
+    <main id="gameScreen" class="screen">
+      <div class="game-top">
+        <button class="small-btn" id="gameBack">←</button>
+        <div class="progress-wrap">
+          <div class="progress-text"><span id="matchedCount">0</span>/<span id="targetCount">12</span></div>
+          <div class="progress"><i id="progressBar"></i></div>
+        </div>
+        <div class="timer">⏱ <span id="timer">60</span></div>
+      </div>
+
+      <div class="level-label">LEVEL <span id="gameLevel">1</span></div>
+      <section id="board" class="board"></section>
+
+      <div class="tray-wrap">
+        <div class="tray" id="tray"></div>
+      </div>
+
+      <div class="powerups">
+        <button id="undoBtn"><span>↩️</span><small>Undo</small><b id="undoCount">3</b></button>
+        <button id="shuffleBtn"><span>🔀</span><small>Shuffle</small><b id="shuffleCount">3</b></button>
+        <button id="hintBtn"><span>💡</span><small>Hint</small><b id="hintCount">3</b></button>
+        <button id="extraBtn"><span>➕</span><small>Extra Slot</small><b id="extraCount">1</b></button>
+      </div>
+    </main>
+
+    <div id="modal" class="modal hidden">
+      <div class="modal-card">
+        <button class="modal-close" id="modalClose">✕</button>
+        <div id="modalContent"></div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
