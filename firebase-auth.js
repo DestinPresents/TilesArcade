@@ -1,4 +1,4 @@
-/* Tile Trails Firebase Auth + Firestore cloud save */
+/* Tile Trails Firebase Auth + Firestore cloud save By Aditya Singh*/
 (function () {
   "use strict";
 
